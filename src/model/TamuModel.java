@@ -32,6 +32,15 @@ public class TamuModel {
         return null;
     }
 
+    public static TamuEntity cariNoKamar(int noKamr){
+        for (TamuEntity entityTamu : pengunjung){
+            if (entityTamu.getNoKamar() == noKamr){
+                return entityTamu;
+            }
+        }
+        return null;
+    }
+
     public static int indexTamu(String nik){
         TamuEntity cariTamu = cariNik(nik);
         return pengunjung.indexOf(cariTamu);

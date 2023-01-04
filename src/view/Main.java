@@ -3,6 +3,9 @@ package view;
 import controller.StaffController;
 import model.StaffModel;
 import model.KamarModel;
+//import view.gui.swing;
+
+import javax.swing.*;
 
 public class Main {
     private void run(){
@@ -14,6 +17,8 @@ public class Main {
         KamarModel.initialKamar();
     }
     public static void main(String[] args) {
+//        swing jswing = new swing();
+//        jswing.setVisible(true);
         initial();
         new Main().run();
     }

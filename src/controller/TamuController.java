@@ -7,10 +7,12 @@ import entity.TamuEntity;
 public class TamuController {
     public boolean tambahTamu(String namaTamu, int usia, String nik, String notelp, String alamat, int noKamar){
         if (TamuModel.cariNik(nik) == null){
-            TamuEntity tamuBaru = new TamuEntity(namaTamu, usia, nik, notelp, alamat, noKamar);
-            TamuModel.insert(tamuBaru);
-            KamarModel.pesanKamar(noKamar);
-            return true;
+            if (TamuModel.cariNoKamar(noKamar) == null) {
+                TamuEntity tamuBaru = new TamuEntity(namaTamu, usia, nik, notelp, alamat, noKamar);
+                TamuModel.insert(tamuBaru);
+                KamarModel.pesanKamar(noKamar);
+                return true;
+            }
         }
         return false;
     }
