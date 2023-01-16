@@ -6,6 +6,8 @@ import view.*;
 import view.staff.login;
 
 public class StaffController {
+    public StaffModel staffM = new StaffModel();
+
     public void forView(){
         login lojin = new login();
         lojin.staffLogin();

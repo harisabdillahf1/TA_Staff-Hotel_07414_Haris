@@ -3,7 +3,6 @@ package model;
 import entity.StaffEntity;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class StaffModel {
     private static ArrayList<StaffEntity> adminData = new ArrayList<>();

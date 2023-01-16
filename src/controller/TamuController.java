@@ -1,10 +1,14 @@
 package controller;
 
+import entity.KamarEntity;
 import model.TamuModel;
 import model.KamarModel;
 import entity.TamuEntity;
 
+import java.util.ArrayList;
+
 public class TamuController {
+
     public boolean tambahTamu(String namaTamu, int usia, String nik, String notelp, String alamat, int noKamar){
         if (TamuModel.cariNik(nik) == null){
             if (TamuModel.cariNoKamar(noKamar) == null) {
@@ -25,5 +29,12 @@ public class TamuController {
             return true;
         }
         return false;
+    }
+    public ArrayList<TamuEntity> tamuList(){
+        return TamuModel.semua();
+    }
+
+    public ArrayList<KamarEntity> kamarList(){
+        return KamarModel.semua();
     }
 }

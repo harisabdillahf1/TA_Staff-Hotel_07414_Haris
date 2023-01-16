@@ -29,6 +29,8 @@ public class beranda {
             pilihan = input.nextInt();
             input.nextLine();
 
+            if (pilihan == 1) visitor.checkIn();
+
             switch (pilihan) {
                 case 1:
                     visitor.checkIn();

@@ -3,12 +3,14 @@ package view;
 import controller.StaffController;
 import model.StaffModel;
 import model.KamarModel;
-//import view.gui.swing;
+//import view.gui.kamarGUI;
+import view.gui.berandaGUI;
+import view.gui.loginGUI;
 
-import javax.swing.*;
 
-public class Main {
-    private void run(){
+
+public class Main implements jalanInterface{
+    public void run(){
         StaffController loginCtrl = new StaffController();
         loginCtrl.forView();
     }
@@ -17,9 +19,11 @@ public class Main {
         KamarModel.initialKamar();
     }
     public static void main(String[] args) {
-//        swing jswing = new swing();
-//        jswing.setVisible(true);
         initial();
-        new Main().run();
+//        new loginGUI().setVisible(true);
+        new berandaGUI().setVisible(true);
+//        new Main().run();
+
+
     }
 }
