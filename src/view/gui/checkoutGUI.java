@@ -14,14 +14,19 @@ public class checkoutGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(width, height);
         setLayout(null);
-        setSize(507, 441);
-        setLocation(250, 180);
+        setSize(507, 350);
+        setLocation(150, 180);
 
         JButton next = new JButton("NEXT");
         next.setBounds(300, 200, 50, 25);
 
         setVisible(true);
         new reservasiGUI().setVisible(true);
+
+        JLabel judul = new JLabel("CHECKOUT TAMU");
+        setFontSize(judul,20);
+        judul.setBounds(20, 30, 200, 30);
+        add(judul);
 
         JLabel nik = new JLabel("Masukkan NIK");
         nik.setBounds(30, 75, 100, 20);
@@ -32,12 +37,17 @@ public class checkoutGUI extends JFrame {
         add(nikField);
 
         ok = new JButton("OK");
-        ok.setBounds(390, 280, 80, 30);
+        ok.setBounds(390, 150, 80, 30);
         add(ok);
 
         event();
     }
 
+    protected void setFontSize(Component comp, int size) {
+        Font fontLama = comp.getFont();
+        Font fontBaru = new Font(fontLama.getFontName(), fontLama.getStyle(), size);
+        comp.setFont(fontBaru);
+    }
 
     public void event(){
         ok.addActionListener((e) -> {
@@ -59,6 +69,4 @@ public class checkoutGUI extends JFrame {
             }
         });
     }
-
-
 }

@@ -17,7 +17,6 @@ public class berandaGUI extends JFrame {
         event();
     }
 
-
     private void createComponents() {
         MenuLabel = new JLabel ("MENU");
         MenuLabel.setBounds(160, 20, 200, 30);
